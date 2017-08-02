@@ -10,6 +10,7 @@ Please read the Dockerfile for this image, it is well commented.
      $ sudo run -d broadtech/alpine-mariadb
 
  To connect to mariadb server use
+
      $ mysql -u root -h <containerIPAddress> -pINSecure
 
 CHANGE PASSWORDS FOR ALL 'root' users before final deployment
