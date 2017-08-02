@@ -14,12 +14,17 @@ Please read the Dockerfile for this image, it is well commented.
      $ mysql -u root -h <containerIPAddress> -pINSecure
 
 CHANGE PASSWORDS FOR ALL 'root' users before final deployment
+
 The current image allows user root@% to connect from anywhere
 using default password 'INSecure'
 
- You cound customize this Dockerfile to create your own image
- Why Alpine Linux?
- Ans: Small, Simple, Secure. https://alpinelinux.org/about/
+You cound customize this Dockerfile to create your own image
+
+Why Alpine Linux?
+
+Ans: Small, Simple, Secure. 
+
+     https://alpinelinux.org/about/
 
 Docker Hub Image Repository
 
