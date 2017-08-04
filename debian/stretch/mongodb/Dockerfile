@@ -34,6 +34,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq mongodb
 # Remove package files fetched for install
 RUN apt-get clean
 
+# Remove unwanted files
+RUN rm -rf /var/lib/apt/lists/
+
 # Open MongoDB default port
 EXPOSE 27017
 
