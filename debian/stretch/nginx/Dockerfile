@@ -6,7 +6,7 @@
 #
 #     $ sudo docker run broadtech/debian-stretch-nginx
 #
-# You cound use this Docker file to create your own image
+# You cound customize this Docker file to create your own image
 
 # Base Image
 FROM debian
@@ -26,6 +26,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq nginx
 
 # Remove retrieved package files from local cache
 RUN apt-get clean
+
+# Cleanup unwanted files
+RUN rm -rf /var/lib/apt/lists/
 
 # Donot daemonize Nginx ( Run in Foreground ). This is required
 # to prevent the container from exiting soon after start
