@@ -31,9 +31,13 @@ RUN apk upgrade
 # Install apache from packages with out caching install files
 RUN apk add --no-cache nginx
 
-# Donot daemonize Nginx ( Run in Foreground ). This is required
-# to prevent the container from exiting soon after start
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+# Configure Nginx
+COPY nginx.conf /etc/nginx
+RUN rm -rf /etc/nginx/conf.d/default.conf
+COPY site.conf /etc/nginx/conf.d
+
+# Add a welcome file
+COPY index.html /var/www/localhost/htdocs
 
 # Create directory for pid file
 RUN mkdir /run/nginx
