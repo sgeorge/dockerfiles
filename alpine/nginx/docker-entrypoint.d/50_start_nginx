@@ -1,0 +1,6 @@
+#!bin/sh
+
+# Start the Nginx service
+/usr/sbin/nginx
+
+######---END---############

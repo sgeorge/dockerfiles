@@ -16,6 +16,7 @@ You can also customize the configuration files
 
 If you donot want to build your own customized image you can
 use the images in Docker Hub which were built using these files
+Repository: https://hub.docker.com/u/broadtech/ 
 
 To deploy Nginx:
 
@@ -49,5 +50,9 @@ You can place the files you want to server using Nginx in
     /var/www/localhost/htdocs
 
 directory
+
+For detailed Documentation on customization please visit
+
+https://github.com/sgeorge/dockerfiles/wiki/Nginx-Simple-Webserver
     
 
