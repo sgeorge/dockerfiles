@@ -36,6 +36,7 @@ Once you get the IP Address point your browser to it
 
 You will get more details about the image and how to use it
 
+
 To run the container in the background use the "-d" option
 
     $ sudo docker run -d broadtech/alpine-nginx
@@ -45,7 +46,7 @@ the container starts
 
     $ sudo docker run -it --entrypoint="/bin/sh" broadtech/alpine-linux
 
-You can place the files you want to server using Nginx in
+You can place the files you want to serve using Nginx in
     
     /var/www/localhost/htdocs
 
