@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Start PHP-FPM
+/usr/sbin/php-fpm7
+#
+#------END---------#
