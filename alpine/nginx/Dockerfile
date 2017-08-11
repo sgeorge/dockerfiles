@@ -1,4 +1,4 @@
-#####################################################################
+#me####################################################################
 # broadtech/alpine-nginx
 # This Dockerfile creats an image that deploys Nginx webserver
 # on Alpine Linux
@@ -8,7 +8,8 @@ FROM alpine
 
 LABEL "vendor"="BroadTech Innovations PVT LTD"
 LABEL "vendor.url"="http://www.broadtech-innovations.com/"
-LABEL "maintainer"="sgeorge.ml@gmail.com"
+LABEL "maintainer.name"="Siju Oommen George"
+LABEL "maintainer.email"="sgeorge.ml@gmail.com"
 
 # Update local package repository index 
 RUN apk update
