@@ -24,6 +24,8 @@ RUN apk add --no-cache nginx
 COPY conf/nginx.conf /etc/nginx
 RUN rm -rf /etc/nginx/conf.d/default.conf
 COPY conf/site.conf /etc/nginx/conf.d
+RUN chown -R nginx.nginx /var/www/localhost/htdocs
+RUN chmod -R 0760 /var/www/localhost/htdocs
 
 # Add a welcome file
 COPY www/index.html /var/www/localhost/htdocs
