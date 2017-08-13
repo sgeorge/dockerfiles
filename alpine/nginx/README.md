@@ -44,7 +44,7 @@ To run the container in the background use the "-d" option
 To run a shell in the container to make modifications before 
 the container starts
 
-    $ sudo docker run -it --entrypoint="/bin/sh" broadtech/alpine-linux
+    $ sudo docker run -it --entrypoint="/bin/sh" broadtech/alpine-nginx
 
 You can place the files you want to serve using Nginx in
     
@@ -54,6 +54,6 @@ directory
 
 For detailed Documentation on customization please visit
 
-https://github.com/sgeorge/dockerfiles/wiki/Nginx-Simple-Webserver
+    https://github.com/sgeorge/dockerfiles/wiki/Nginx-Simple-Webserver
     
 
