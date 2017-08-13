@@ -38,7 +38,7 @@ Once you get the IP Address point your browser to it
  
     http://IPAddress
 
-You will get more details about the image and how to use it
+You can see the PHP Information
 
 
 To run the container in the background use the "-d" option
@@ -50,7 +50,7 @@ the container starts
 
     $ sudo docker run -it --entrypoint="/bin/sh" broadtech/alpine-php7-fpm
 
-You can place the files you want to serve using Nginx in
+You can place the files you want to serve using php7-fpm in
     
     /var/www/localhost/htdocs
 
