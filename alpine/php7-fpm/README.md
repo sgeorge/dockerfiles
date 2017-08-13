@@ -34,13 +34,6 @@ Once you get the container ID you can get its IP Address
 
     $ sudo docker inspect <container ID> |grep IPAddress
 
-Once you get the IP Address point your browser to it
- 
-    http://IPAddress
-
-You can see the PHP Information
-
-
 To run the container in the background use the "-d" option
 
     $ sudo docker run -d broadtech/alpine-php7-fpm
