@@ -41,6 +41,11 @@ RUN apk add --no-cache php7-fpm
 COPY conf/php-fpm.conf /etc/php7/
 COPY conf/www.conf /etc/php7/php-fpm.d/
 
+# Create directory for php files.
+RUN mkdir -p /var/www/localhost/htdocs/
+COPY www/index.php /var/www/localhost/htdocs/
+RUN chmod -R +x /var/www/localhost/htdocs/
+
 # Add entrypoint scripts and make them executable
 RUN mkdir /etc/docker-entrypoint.d
 COPY docker-entrypoint.d/* /etc/docker-entrypoint.d/
