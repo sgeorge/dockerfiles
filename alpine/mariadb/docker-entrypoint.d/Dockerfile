@@ -38,8 +38,8 @@ RUN /usr/bin/mysqld --user=root & \
              WITH GRANT OPTION;" | mysql \
     && echo "GRANT ALL ON *.* TO root@'%' IDENTIFIED BY 'INSecure' \
              WITH GRANT OPTION; FLUSH PRIVILEGES" | mysql -u root -pINSecure \
-    && /usr/bin/mysqladmin -u root -pINSecure shutdown
-
+   #&& /usr/bin/mysqladmin shutdown \
+   && ps aux
 RUN mkdir /etc/docker-entrypoint.d
 COPY docker-entrypoint.d/* /etc/docker-entrypoint.d/
 RUN chmod u+x /etc/docker-entrypoint.d/*
