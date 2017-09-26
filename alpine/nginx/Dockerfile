@@ -11,9 +11,6 @@ LABEL "vendor.url"="http://www.broadtech-innovations.com/"
 LABEL "maintainer.name"="Siju Oommen George"
 LABEL "maintainer.email"="sgeorge.ml@gmail.com"
 
-# Update local package repository index 
-RUN apk update
-
 # Upgrade existing packages in the base image
 RUN apk --no-cache upgrade
 
@@ -50,5 +47,3 @@ EXPOSE 80
 ENTRYPOINT ["/usr/sbin/run_parts_entrypoint.sh"]
 #
 # -------------------------END----------------------------------------#
-
-

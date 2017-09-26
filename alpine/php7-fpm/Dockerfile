@@ -11,14 +11,11 @@ LABEL "vendor.url"="http://www.broadtech-innovations.com/"
 LABEL "maintainer.name"="Siju Oommen George"
 LABEL "maintainer.email"="sgeorge.ml@gmail.com"
 
-# Update local package repository index 
-RUN apk update
-
 # Upgrade existing packages in the base image
 RUN apk --no-cache upgrade
 
 # Install php-fpm from packages with out caching install files
-RUN apk add --no-cache php7-fpm 
+RUN apk add --no-cache php7-fpm
 
 # Uncomment below to add the php packages you need
 # For a full list of php packages vist
@@ -35,7 +32,7 @@ RUN apk add --no-cache php7-fpm
 #		php7-zip \
 #		php7-mysqli \
 #		php7-pgsql \
-#		
+#
 
 # Copy configuration files
 COPY conf/php-fpm.conf /etc/php7/
@@ -54,13 +51,10 @@ RUN chmod u+x /etc/docker-entrypoint.d/*
 COPY scripts/run_parts_entrypoint.sh /usr/sbin/
 RUN chmod u+x /usr/sbin/run_parts_entrypoint.sh
 
-# Open port to access FPM 
+# Open port to access FPM
 EXPOSE 9000
 
 # Run PHP-FPM when container starts
 CMD ["/usr/sbin/run_parts_entrypoint.sh"]
 
 # -------------------------END----------------------------------------#
-
-
-

@@ -10,11 +10,8 @@ LABEL "vendor"="BroadTech Innovations PVT LTD"
 LABEL "vendor.url"="http://www.broadtech-innovations.com/"
 LABEL "maintainer"="sgeorge.ml@gmail.com"
 
-# Update local package repository index
-RUN apk update
-
 # Upgrade existing packages in the base image
-RUN apk upgrade
+RUN apk --no-cache upgrade
 
 # Install 'mariadb/mysql' client
 RUN apk add --no-cache mysql-client
