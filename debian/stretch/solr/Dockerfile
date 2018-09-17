@@ -42,7 +42,7 @@ RUN set -e; \
     for key in $SOLR_KEYS $GOSU_KEY; do \
       found=''; \
     for server in \
-      ha.pool.sks-keyservers.net \
+      #ha.pool.sks-keyservers.net \
       hkp://keyserver.ubuntu.com:80 \
       hkp://p80.pool.sks-keyservers.net:80 \
       pgp.mit.edu \
@@ -65,9 +65,9 @@ RUN set -e; \
   gosu nobody true && \
   mkdir -p /opt/solr && \
   echo "downloading $SOLR_URL" && \
-  wget -nv $SOLR_URL -O /opt/solr.tgz && \
+  wget $SOLR_URL -O /opt/solr.tgz && \
   echo "downloading $SOLR_URL.asc" && \
-  wget -nv $SOLR_URL.asc -O /opt/solr.tgz.asc && \
+  wget $SOLR_URL.asc -O /opt/solr.tgz.asc && \
   echo "$SOLR_SHA256 */opt/solr.tgz" | sha256sum -c - && \
   (>&2 ls -l /opt/solr.tgz /opt/solr.tgz.asc) && \
   gpg --batch --verify /opt/solr.tgz.asc /opt/solr.tgz && \
@@ -80,11 +80,16 @@ RUN set -e; \
   sed -i -e '/-Dsolr.clustering.enabled=true/ a SOLR_OPTS="$SOLR_OPTS -Dsun.net.inetaddr.ttl=60 -Dsun.net.inetaddr.negative.ttl=60"' /opt/solr/bin/solr.in.sh && \
   chown -R $SOLR_USER:$SOLR_GROUP /opt/solr /opt/mysolrhome
 
-RUN 
+#COPY scripts /opt/docker-solr/scripts
+#RUN chown -R $SOLR_USER:$SOLR_GROUP /opt/docker-solr
+
+#COPY conf/managed-schema /opt/solr/example/techproducts/solr/techproducts/conf/
+#COPY conf/techshirts.xml /opt/solr/example/exampledocs/
 
 EXPOSE 8983
 WORKDIR /opt/solr
 USER $SOLR_USER
+#RUN bin/solr -e techproducts
+#RUN bin/post -c techproducts example/exampledocs/techshirts.xml
 
-ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["solr-foreground"]
+ENTRYPOINT ["/bin/bash"]

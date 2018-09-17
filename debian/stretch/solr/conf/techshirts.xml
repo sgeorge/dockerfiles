@@ -1,0 +1,57 @@
+<add>
+
+<doc>
+  <field name="id">12346</field>
+  <field name="name">Watson Conversation Tech Shirt</field>
+  <field name="manu">Watson Tutorial</field>
+  <!-- Join -->
+  <field name="manu_id_s">watsontutorial</field>
+  <field name="cat">clothing</field>
+  <field name="features">cotton, watson tutorial logo,v-neck, short sleeves</field>
+  <field name="size">x-large</field>
+  <field name="color">blue</field>
+  <field name="price">21.99</field>
+  <field name="popularity">1</field>
+  <field name="inStock">true</field>
+  <!-- Buffalo store -->
+  <field name="store">43.17614,-90.57341</field>
+</doc>
+
+
+<doc>
+  <field name="id">12347</field>
+  <field name="name">Watson Conversation Tech Shirt</field>
+  <field name="manu">Watson Tutorial</field>
+  <!-- Join -->
+  <field name="manu_id_s">watsontutorial</field>
+  <field name="cat">clothing</field>
+  <field name="features">cotton, watson tutorial logo,v-neck, short sleeves</field>
+  <field name="size">x-large</field>
+  <field name="color">green</field>
+  <field name="price">21.99</field>
+  <field name="popularity">1</field>
+  <field name="inStock">true</field>
+  <!-- Buffalo store -->
+  <field name="store">43.17614,-90.57341</field>
+</doc>
+
+
+<doc>
+  <field name="id">12348</field>
+  <field name="name">Watson Conversation Tech Shirt</field>
+  <field name="manu">Watson Tutorial</field>
+  <!-- Join -->
+  <field name="manu_id_s">watsontutorial</field>
+  <field name="cat">clothing</field>
+  <field name="features">cotton, watson tutorial logo,v-neck, short sleeves</field>
+  <field name="size">x-large</field>
+  <field name="color">red</field>
+  <field name="price">21.99</field>
+  <field name="popularity">1</field>
+  <field name="inStock">true</field>
+  <!-- Buffalo store -->
+  <field name="store">43.17614,-90.57341</field>
+</doc>
+
+
+</add>
